@@ -1,4 +1,6 @@
-class Veiculo():
+from BancoDados import BD_estacionamento
+
+class Veiculo():       
     def Tela_Veiculo():
         print("""
             MWMWMWMWMWMWMWMMWWMMWMWMWMWMMWMWMWM
@@ -24,6 +26,8 @@ class Veiculo():
         marca = input("Marca: ")
         modelo = input("Modelo: ")
         placa = input("Placa: ")
+        insert = BD_estacionamento()
+        insert.insert(proprietario,marca,modelo,placa)
     def Listar_Veiculo():
         print("""
             MWMWMWMWMWMWMWMMWWMMWMWMWMWMMWMWMWM
@@ -54,3 +58,6 @@ class Veiculo():
               """)
    
         placa = input("Placa: ")
+        
+test = Veiculo
+test.Cadastrar_Veiculo()
